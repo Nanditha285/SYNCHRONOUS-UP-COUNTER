@@ -32,15 +32,62 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+```
+UP COUNTER
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
 
-Developed by: RegisterNumber:
+DOWN COUNTER
+module ex12(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out-1;
+end
+endmodule
+```
+
+
+Developed by: nanditha shaji
+
+RegisterNumber:25012970
 */
 
 **RTL LOGIC UP COUNTER**
+counter up
+<img width="751" height="404" alt="image" src="https://github.com/user-attachments/assets/e2b960cf-8d7c-48af-8eb1-84bcbb5178ff" />
+
+counter down
+<img width="771" height="376" alt="image" src="https://github.com/user-attachments/assets/3ceabeb7-6a6b-497d-bf54-434e5565c7eb" />
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
+up counter
+<img width="771" height="377" alt="image" src="https://github.com/user-attachments/assets/7b24ebeb-9912-45a0-b768-e531efb379a7" />
+
+down counter
+
+<img width="764" height="393" alt="image" src="https://github.com/user-attachments/assets/b9ba94f0-ef69-4beb-92cc-2662f0ebd5ba" />
+
 
 **TRUTH TABLE**
 
+<img width="364" height="376" alt="image" src="https://github.com/user-attachments/assets/4efb4f7c-c89a-470d-9b0b-8343959e6da4" />
+
+
 **RESULTS**
+
+Thus implemented 4 bit synchronous up counter and validate functionality.
